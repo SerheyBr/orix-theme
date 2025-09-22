@@ -60,7 +60,7 @@
               $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
               $arg = array(
                   'post_type' => 'product',
-                  'posts_per_page' => '20',
+                  'posts_per_page' => '5',
                   'paged' => $paged,
               );
 

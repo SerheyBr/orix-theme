@@ -6,3 +6,6 @@
 .sidebar-filter__color {
   cursor: pointer;
 }
+.catalog-content {
+  flex: 1 1 100%;
+}

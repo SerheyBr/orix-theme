@@ -229,7 +229,7 @@ const maxPriceInput = document.querySelector(
 
 if (priceSlider) {
   noUiSlider.create(priceSlider, {
-    start: [0, 1000],
+    start: [0, 2000],
     connect: true,
     range: {
       min: 0,
@@ -253,6 +253,12 @@ if (priceSlider) {
 
   maxPriceInput.addEventListener("change", function () {
     priceSlider.noUiSlider.set([null, this.value]);
+  });
+
+  // Триггерим AJAX при движении слайдера
+  priceSlider.noUiSlider.on("change", function () {
+    minPriceInput.dispatchEvent(new Event("change", { bubbles: true }));
+    maxPriceInput.dispatchEvent(new Event("change", { bubbles: true }));
   });
 }
 

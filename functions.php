@@ -102,5 +102,143 @@ add_action( 'admin_menu', function() {
 });
 
 
-// ajax обработчик
+// хлебные крошки
+function my_breadcrumbs() {
 
+    // не выводим на главной
+    if ( is_front_page() ) return;
+
+    echo '<nav class="breadcrumbs__content">';
+    echo '<a href="' . home_url() . '">Главная</a>';
+
+    if ( is_category() || is_single() ) {
+        $category = get_the_category();
+        if ( $category ) {
+            $cat_link = get_category_link( $category[0]->term_id );
+            echo ' / <a href="' . $cat_link . '">' . $category[0]->name . '</a>';
+        }
+        if ( is_single() ) {
+            echo ' / ' . get_the_title();
+        }
+    } elseif ( is_page() ) {
+        global $post;
+        if ( $post->post_parent ) {
+            $parent_id   = $post->post_parent;
+            $breadcrumbs = array();
+            while ( $parent_id ) {
+                $page = get_post($parent_id);
+                $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+                $parent_id = $page->post_parent;
+            }
+            $breadcrumbs = array_reverse($breadcrumbs);
+            foreach ( $breadcrumbs as $crumb ) {
+                echo ' / ' . $crumb;
+            }
+        }
+        echo ' / ' . get_the_title();
+    } elseif ( is_search() ) {
+        echo ' / Результаты поиска по запросу "' . get_search_query() . '"';
+    } elseif ( is_404() ) {
+        echo ' / Ошибка 404';
+    } elseif ( is_archive() ) {
+        echo ' / Архив: ' . post_type_archive_title('', false);
+    }
+
+    echo '</nav>';
+}
+
+
+// ajax обработчик
+function my_filter_products() {
+    $arg = array(
+        'post_type' => 'product',
+        'posts_per_page' => '-1',
+        'paged' => 1,
+    );
+
+    $tax_query = array(
+        'relation' => 'AND',
+    );
+
+    $colors = isset($_GET['pa_color']) ? $_GET['pa_color'] : [];
+
+    if(!empty($colors)){
+        $tax_query[] = array(
+            'taxonomy' => 'pa_color',
+            'field'    => 'slug',
+            'terms'    => $colors, // несколько терминов одной таксономии
+            'operator' => 'IN',
+        );
+
+        $arg['tax_query'] = $tax_query;
+    }
+
+    $brands = isset($_GET['product_brand']) ? $_GET['product_brand'] : [];
+
+        if(!empty($brands)){
+        $tax_query[] = array(
+            'taxonomy' => 'product_brand',
+            'field'    => 'slug',
+            'terms'    => $brands, // несколько терминов одной таксономии
+            'operator' => 'IN',
+        );
+
+        $arg['tax_query'] = $tax_query;
+    }
+
+     $mechanism = isset($_GET['pa_mechanism']) ? $_GET['pa_mechanism'] : [];
+
+        if(!empty($mechanism)){
+        $tax_query[] = array(
+            'taxonomy' => 'pa_mechanism',
+            'field'    => 'slug',
+            'terms'    => $mechanism, // несколько терминов одной таксономии
+            'operator' => 'IN',
+        );
+
+        $arg['tax_query'] = $tax_query;
+    }
+
+
+    $min_price = isset($_GET['min_price']) ? intval($_GET['min_price']) : 0;
+    $max_price = isset($_GET['max_price']) ? intval($_GET['max_price']) : 0;
+
+    if ($min_price > 0 || $max_price > 0) {
+        $range = ['key' => '_price', 'type' => 'NUMERIC'];
+
+        if ($min_price > 0 && $max_price > 0) {
+            $range['value']   = [$min_price, $max_price];
+            $range['compare'] = 'BETWEEN';
+        } elseif ($min_price > 0) {
+            $range['value']   = $min_price;
+            $range['compare'] = '>=';
+        } elseif ($max_price > 0) {
+            $range['value']   = $max_price;
+            $range['compare'] = '<=';
+        }
+
+        $arg['meta_query'][] = $range;
+    }
+    echo '<pre>';
+    print_r( $_GET);
+    echo '</pre>'; 
+   
+  
+
+    $query = new WP_Query($arg);
+
+    if($query->have_posts()){
+        while($query->have_posts()){
+            $query->the_post();
+            get_template_part('templates/card-variant-1');
+        }
+    }else{
+        echo 'товары не найдены';
+    }
+
+    wp_reset_postdata();
+    wp_die(); // обязательно, чтобы завершить AJAX-запрос
+}
+
+add_action('wp_ajax_my_filter_products', 'my_filter_products');
+add_action('wp_ajax_nopriv_my_filter_products', 'my_filter_products');

@@ -28,11 +28,13 @@
                             'черный' => 'black',    
                         );
                         $color = $colors[$term->name] ?? '';
-                        
+                        echo '<label class="label-filter-color">';
+                        echo '<input type="checkbox" name="'.$taxonomy.'[]" value="'.esc_attr($term->slug).'"> ';
                         echo '<div class="sidebar-filter__color">';
                         echo '<div class="sidebar-filter__color-exemple" style="background-color:'.$color.'"></div>';
                         echo '<p>'.$term->name.'</p>';
                         echo '</div>';
+                        echo '</label>';
                     }elseif($taxonomy === 'pa_sex'){
                         
                     }else{
@@ -50,14 +52,28 @@
  <main class="catalog">
       <div class="container">
         <div class="breadcrumbs">
-          <p class="breadcrumbs__content">Главная / Каталог товаров / Обувь</p>
+          <!-- <p class="breadcrumbs__content">Главная / Каталог товаров / Обувь</p> -->
+          <?php my_breadcrumbs();?>
         </div>
+
+            <?php
+              $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+              $arg = array(
+                  'post_type' => 'product',
+                  'posts_per_page' => '20',
+                  'paged' => $paged,
+              );
+
+              $query = new WP_Query($arg);
+            ?>
+
+            <?php if($query->have_posts()):?>
 
         <div class="catalog__wrapper">
           <div class="catalog__head--mobill">
             <div class="catalog__info">
-              <h4 class="catalog__title title-section">Обувь</h4>
-              <p class="catalog__subtitle">1 746 товаров</p>
+              <h4 class="catalog__title title-section"><?php the_title() ;?></h4>
+              <p class="catalog__subtitle"><?php echo $query->found_posts;?> товаров</p>
             </div>
             <div class="catalog__text-sort">
               <p>Сортировать по &nbsp;<b>От дешевых к дорогим</b></p>
@@ -142,7 +158,7 @@
                 </svg>
               </button>
               <div class="sidebar__body">
-                <div class="sidebar__filters">
+                <form class="sidebar__filters">
                   <!-- <div class="sidebar__filter sidebar-filter">
                     <div class="sidebar-filter__header">
                       <h4 class="sidebar__title title-filter-category">
@@ -221,11 +237,13 @@
                       <div class="sidebar-filter__price">
                         <div class="sidebar-filter__price-header">
                           <input
+                            name="min_price"
                             type="number"
                             class="sidebar-filter__price-number sidebar-filter__price-number--min"
                           />
                           <p>-</p>
                           <input
+                            name="max_price"
                             type="number"
                             class="sidebar-filter__price-number sidebar-filter__price-number--max"
                           />
@@ -358,7 +376,7 @@
                     </svg>
                     Сбросить все фильтры
                   </button>
-                </div>
+            </form>
               </div>
             </div>
           </aside>
@@ -366,8 +384,8 @@
           <div class="catalog-content">
             <div class="catalog-content__head">
               <div class="catalog-content__info">
-                <h4 class="catalog-content__title title-section">Обувьс111</h4>
-                <p class="catalog-content__subtitle">1 746 товаров</p>
+                <h4 class="catalog-content__title title-section"><?php the_title();?></h4> 
+                <p class="catalog-content__subtitle"><?php echo $query->found_posts;?> товаров</p>
               </div>
               <div class="catalog-content__text-sort">
                 <p>Сортировать по &nbsp;<b>От дешевых к дорогим</b></p>
@@ -399,24 +417,11 @@
             </ul>
             <div class="catalog-content__body">
               <div class="catalog-content__grid">
-                    <?php 
-                        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                        $arg = array(
-                            'post_type' => 'product',
-                            'posts_per_page' => '20',
-                            'paged' => $paged,
-                        );
-
-                        $query = new WP_Query($arg);
-
-                        if($query->have_posts()){
-                            while($query->have_posts()){
-                                $query->the_post();
-                                get_template_part('templates/card-variant-1');
-                            }
-                        }
-                        wp_reset_postdata();
-                    ?>
+                <?php while($query->have_posts()): $query->the_post()?>
+                      <?php get_template_part('templates/card-variant-1');?>
+                    <?php endwhile;?>
+                  <?php endif;?>
+                  <?php  wp_reset_postdata();;?>
               </div>
 
               <div class="catalog-content__pagination">

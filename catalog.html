@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="burger-menu header__burger">
+            <button class="burger-menu__button"></button>
+          </div>
+          <a href="index.html"
+            ><img
+              class="header__logo"
+              src="assets/images/placeholder.svg"
+              alt="logo"
+              width="80"
+              height="60"
+          /></a>
+
+          <nav class="header__navigation">
+            <ul>
+              <li>
+                <a href="catalog.html">Каталог</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Sail</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Ремешки</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Расчет стоимости</a>
+              </li>
+              <li>
+                <a href="#">Информация</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__icons">
+            <div class="header__icon">
+              <img src="assets/images/icons/seacrh.svg" alt="search" />
+            </div>
+            <!-- <a href="#" class="header__icon">
+          <img src="assets/images/icons/star.svg" alt="star" />
+        </a> -->
+            <a href="#" class="header__icon">
+              <img src="assets/images/icons/profile.svg" alt="profile" />
+            </a>
+            <a href="#" class="header__icon">
+              <img src="assets/images/icons/cart.svg" alt="cart" />
+              <p class="header__cart-price">11 899 ₽</p>
+              <p class="header__numbers">7</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- br -->
+
+    <main class="catalog">
+      <div class="container">
+        <div class="breadcrumbs">
+          <p class="breadcrumbs__content">Главная / Каталог товаров / Обувь</p>
+        </div>
+
+        <div class="catalog__wrapper">
+          <div class="catalog__head--mobill">
+            <div class="catalog__info">
+              <h4 class="catalog__title title-section">Обувь</h4>
+              <p class="catalog__subtitle">1 746 товаров</p>
+            </div>
+            <div class="catalog__text-sort">
+              <p>Сортировать по &nbsp;<b>От дешевых к дорогим</b></p>
+              <svg
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                  fill="#6A6E71"
+                />
+              </svg>
+              <ul class="catalog__menu-sort">
+                <li>От дешевых к дорогим</li>
+                <li>От новых к старым</li>
+              </ul>
+            </div>
+          </div>
+          <button class="catalog__button-triger-mobil-menu">
+            Открыть Фильтры
+            <svg
+              width="9"
+              height="5"
+              viewBox="0 0 9 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.14645 4.85355C4.34171 5.04882 4.65829 5.04882 4.85355 4.85355L8.03553 1.67157C8.2308 1.47631 8.2308 1.15973 8.03553 0.964466C7.84027 0.769204 7.52369 0.769204 7.32843 0.964466L4.5 3.79289L1.67157 0.964466C1.47631 0.769204 1.15973 0.769204 0.964466 0.964466C0.769204 1.15973 0.769204 1.47631 0.964466 1.67157L4.14645 4.85355ZM4 3.5L4 4.5L5 4.5L5 3.5L4 3.5Z"
+                fill="#232323"
+              />
+            </svg>
+          </button>
+          <div class="catalog__text-sort-mobil">
+            <p>Сортировать по &nbsp;<b>От дешевых к дорогим</b></p>
+            <svg
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                fill="#6A6E71"
+              />
+            </svg>
+            <ul class="catalog__menu-sort">
+              <li>От дешевых к дорогим</li>
+              <li>От новых к старым</li>
+            </ul>
+          </div>
+          <aside class="sidebar">
+            <div class="sidebar__wrapper">
+              <button class="sidebar__btn-close">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.8">
+                    <path
+                      d="M1 12.3137L12.3137 1.00001"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12.3145 12.3137L1.00074 1.00001"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+              </button>
+              <div class="sidebar__body">
+                <div class="sidebar__filters">
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">
+                        Категории
+                      </h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <ul class="sidebar-filter__list">
+                        <li><a href="#">Кроссовки </a></li>
+                        <li><a href="#">Кеды </a></li>
+                        <li><a href="#">Лофферы </a></li>
+                        <li><a href="#">Сандали </a></li>
+                        <li><a href="#">Шлепки </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">
+                        Категории
+                      </h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <ul class="sidebar-filter__list">
+                        <li><a href="#">Кроссовки </a></li>
+                        <li><a href="#">Кеды </a></li>
+                        <li><a href="#">Лофферы </a></li>
+                        <li><a href="#">Сандали </a></li>
+                        <li><a href="#">Шлепки </a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">
+                        Фильтр по цене
+                      </h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <div class="sidebar-filter__price">
+                        <div class="sidebar-filter__price-header">
+                          <input
+                            type="number"
+                            class="sidebar-filter__price-number sidebar-filter__price-number--min"
+                          />
+                          <p>-</p>
+                          <input
+                            type="number"
+                            class="sidebar-filter__price-number sidebar-filter__price-number--max"
+                          />
+                        </div>
+                        <div class="sidebar-filter__price-range"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">
+                        Размеры (EU)
+                      </h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <div class="sidebar-filter__size-grid">
+                        <button>36</button>
+                        <button>37</button>
+                        <button>38</button>
+                        <button>39</button>
+                        <button>40</button>
+                        <button>41</button>
+                        <button>42</button>
+                        <button>42</button>
+                        <button>43</button>
+                        <button>44</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">
+                        Бренды
+                      </h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <div class="sidebar-filter__brends">
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                        <div
+                          class="sidebar-filter__brend pretty p-svg p-curve p-smooth p-primary"
+                        >
+                          <input type="checkbox" />
+                          <div class="state p-primary">
+                            <svg class="svg svg-icon" viewBox="0 0 20 20">
+                              <path
+                                d="M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z"
+                                style="stroke: white; fill: white"
+                              ></path>
+                            </svg>
+                            <label>Adidas</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar__filter sidebar-filter">
+                    <div class="sidebar-filter__header">
+                      <h4 class="sidebar__title title-filter-category">Цвет</h4>
+                      <svg
+                        width="8"
+                        height="5"
+                        viewBox="0 0 8 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.64645 0.146447C3.84171 -0.0488155 4.15829 -0.0488155 4.35355 0.146447L7.53553 3.32843C7.7308 3.52369 7.7308 3.84027 7.53553 4.03553C7.34027 4.2308 7.02369 4.2308 6.82843 4.03553L4 1.20711L1.17157 4.03553C0.976311 4.2308 0.659728 4.2308 0.464466 4.03553C0.269204 3.84027 0.269204 3.52369 0.464466 3.32843L3.64645 0.146447ZM4 1.5L3.5 1.5L3.5 0.5L4 0.5L4.5 0.5L4.5 1.5L4 1.5Z"
+                          fill="#232323"
+                        />
+                      </svg>
+                    </div>
+                    <div class="sidebar-filter__body">
+                      <div class="sidebar-filter__colors-grid">
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                        <div class="sidebar-filter__color">
+                          <div class="sidebar-filter__color-exemple"></div>
+                          <p>Серый</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="sidebar-filter__reset">
+                    <svg
+                      width="9"
+                      height="8"
+                      viewBox="0 0 9 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 7.49954L7.99954 0.5M8 7.49977L1.00046 0.50023"
+                        stroke="#2C2C2C"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Сбросить все фильтры
+                  </button>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <div class="catalog-content">
+            <div class="catalog-content__head">
+              <div class="catalog-content__info">
+                <h4 class="catalog-content__title title-section">Обувь</h4>
+                <p class="catalog-content__subtitle">1 746 товаров</p>
+              </div>
+              <div class="catalog-content__text-sort">
+                <p>Сортировать по &nbsp;<b>От дешевых к дорогим</b></p>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="#6A6E71"
+                  />
+                </svg>
+                <ul class="catalog-content__menu-sort">
+                  <li>От дешевых к дорогим</li>
+                  <li>От новых к старым</li>
+                </ul>
+              </div>
+            </div>
+            <ul class="catalog-content__tags">
+              <li class="catalog-content__tag">
+                <div class="catalog-content__tag-text">
+                  <span>название атрибута</span>: <span>выбранный атрибут</span>
+                </div>
+                <button>&#x2716;</button>
+              </li>
+            </ul>
+            <div class="catalog-content__body">
+              <div class="catalog-content__grid">
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+
+                <!-- br -->
+                <div class="card-product">
+                  <div class="card-product__img">
+                    <img
+                      src="/assets/images/preview_GA_110JAH22_2A.webp"
+                      alt="img"
+                    />
+                  </div>
+
+                  <h3 class="title-card card-product__title">
+                    Nike Court Zoom Cage 2
+                  </h3>
+                  <div class="card-product__price">
+                    <p class="card-product__price--old off">200 BUN</p>
+                    <p class="card-product__price--new">100 BUN</p>
+                  </div>
+                  <a href="page-full-card.html"></a>
+                </div>
+              </div>
+              <div class="catalog-content__pagination">
+                <div class="catalog-content__pagination-arrow">
+                  <a href="#">
+                    <svg
+                      width="23"
+                      height="10"
+                      viewBox="0 0 23 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.54038 4.54038C0.286539 4.79422 0.286539 5.20578 0.54038 5.45962L4.67695 9.59619C4.9308 9.85003 5.34235 9.85003 5.59619 9.59619C5.85003 9.34235 5.85003 8.9308 5.59619 8.67696L1.91924 5L5.59619 1.32304C5.85003 1.0692 5.85003 0.657647 5.59619 0.403806C5.34235 0.149965 4.9308 0.149965 4.67695 0.403806L0.54038 4.54038ZM23 4.35L1 4.35V5.65L23 5.65V4.35Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="catalog-content__pagination-numbers">
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <p>...</p>
+                  <a href="#">123</a>
+                </div>
+                <div class="catalog-content__pagination-arrow">
+                  <a href="#">
+                    <svg
+                      width="23"
+                      height="10"
+                      viewBox="0 0 23 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.323 9.59624L22.4596 5.45967C22.7135 5.20583 22.7135 4.79427 22.4596 4.54043L18.323 0.403852C18.0692 0.150011 17.6576 0.150011 17.4038 0.403852C17.15 0.657693 17.15 1.06925 17.4038 1.32309L20.4308 4.35005L0 4.35005L0 5.65005L20.4308 5.65005L17.4038 8.677C17.15 8.93084 17.15 9.3424 17.4038 9.59624C17.6576 9.85008 18.0692 9.85008 18.323 9.59624Z"
+                        fill="#121214"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__columns">
+            <div class="footer__column footer__dropdown">
+              <p class="footer__column-title">
+                Каталог
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </p>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column footer__dropdown">
+              <p class="footer__column-title">
+                Помощь
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </p>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">Доставка</a>
+                </li>
+                <li>
+                  <a href="#">Оплата</a>
+                </li>
+                <li>
+                  <a href="#">гарантия</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <p class="footer__column-title">Контакты</p>
+              <ul class="footer__list">
+                <li class="footer__mail">
+                  <a href="#">info@xwear.info</a>
+                </li>
+                <li class="footer__phone">
+                  <a href="tel:79936083885">+7 993 608 38 85</a>
+                </li>
+              </ul>
+              <div class="footer__icons">
+                <p class="footer__icons-title">Мессенджеры</p>
+                <div class="footer__icons-flex">
+                  <a href="#"
+                    ><img src="assets/images/icons/watsap.svg" alt="watsap"
+                  /></a>
+                  <a href="#"
+                    ><img src="assets/images/icons/telegram.svg" alt="telegram"
+                  /></a>
+                </div>
+              </div>
+              <div class="footer__icons">
+                <p class="footer__icons-title">Наши соц.сети</p>
+                <div class="footer__icons-flex">
+                  <a href="#"
+                    ><img src="assets/images/icons/vk.svg" alt="vk"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="assets/libs/nouislider/nouislider.min.js"></script>
+    <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

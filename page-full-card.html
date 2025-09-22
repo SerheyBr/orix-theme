@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    <!-- header start -->
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="burger-menu header__burger">
+        <button class="burger-menu__button"></button>
+      </div>
+      <a href="index.html"
+        ><img
+          class="header__logo"
+          src="assets/images/placeholder.svg"
+          alt="logo"
+          width="80"
+          height="60"
+      /></a>
+
+      <nav class="header__navigation">
+        <ul>
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <svg
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                fill="white"
+              />
+            </svg>
+
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Sail</a>
+            <svg
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                fill="white"
+              />
+            </svg>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Ремешки</a>
+            <svg
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.3"
+                d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                fill="white"
+              />
+            </svg>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Расчет стоимости</a>
+          </li>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__icons">
+        <div class="header__icon">
+          <img src="assets/images/icons/seacrh.svg" alt="search" />
+        </div>
+        <!-- <a href="#" class="header__icon">
+          <img src="assets/images/icons/star.svg" alt="star" />
+        </a> -->
+        <a href="#" class="header__icon">
+          <img src="assets/images/icons/profile.svg" alt="profile" />
+        </a>
+        <a href="#" class="header__icon">
+          <img src="assets/images/icons/cart.svg" alt="cart" />
+          <p class="header__cart-price">11 899 ₽</p>
+          <p class="header__numbers">7</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end -->
+
+    <main class="page-full-card">
+      <div class="page-full-card__wrapper">
+        <div class="container"><div class="breadcrumbs">
+  <p class="breadcrumbs__content">Главная / Каталог товаров / Обувь</p>
+</div>
+</div>
+
+        <div class="page-full-card__body">
+          <div class="container"><div class="full-card">
+  <div class="full-card__wrapper">
+    <h3 class="full-card__title hidden">Кроссовки Nike Court Zoom Cage 2</h3>
+    <div class="full-card__slider">
+      <!-- Основной слайдер -->
+      <div class="swiper full-card-main-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA-110XBC-1A.webp" alt="shoe1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA_110XRG_7A.webp" alt="shoe2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_DW_5700PT_5.webp" alt="shoe3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_DW_6900RGB_1.webp" alt="shoe4" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Слайдер превью -->
+      <div class="swiper full-card-thumbs-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA-110XBC-1A.webp" alt="thumb1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA-110XBC-1A.webp" alt="thumb2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA-110XBC-1A.webp" alt="thumb3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/preview_BA-110XBC-1A.webp" alt="thumb4" />
+          </div>
+        </div>
+        <div class="full-card-thumbs-slider__pagination"></div>
+      </div>
+    </div>
+    <div class="full-card__description">
+      <h3 class="full-card__title">Кроссовки Nike Court Zoom Cage 2</h3>
+      <p class="full-card__subtitle">Детали:</p>
+      <div class="full-card__description__body">
+        <ul class="full-card__description-items">
+          <li>
+            <p class="full-card__description-name">Артикул</p>
+            <span><div class="full-card__description-line"></div></span>
+            <p class="full-card__description-result">234234</p>
+          </li>
+          <li>
+            <p class="full-card__description-name">1</p>
+            <span><div class="full-card__description-line"></div></span>
+            <p class="full-card__description-result">1</p>
+          </li>
+          <li>
+            <p class="full-card__description-name">1</p>
+            <span><div class="full-card__description-line"></div></span>
+            <p class="full-card__description-result">Lorem, ipsum dolor.</p>
+          </li>
+          <li>
+            <p class="full-card__description-name">Lorem ipsum</p>
+            <span><div class="full-card__description-line"></div></span>
+            <p class="full-card__description-result">Lorem, ipsum dolor.</p>
+          </li>
+        </ul>
+        <!-- <ul class="full-card__description-list-names">
+          <li>
+            <p>Артикул</p>
+          </li>
+          <li>
+            <p>Категория</p>
+          </li>
+          <li>
+            <p>Категория</p>
+          </li>
+          <li>
+            <p>Модель</p>
+          </li>
+          <li>
+            <p>Цвет</p>
+          </li>
+        </ul>
+        <ul class="full-card__description-list-result">
+          <li>
+            <p>Артикул</p>
+          </li>
+          <li>
+            <p>Категория</p>
+          </li>
+          <li>
+            <p>Категория</p>
+          </li>
+          <li>
+            <p>Модель</p>
+          </li>
+          <li>
+            <p>Цвет</p>
+          </li>
+        </ul> -->
+      </div>
+      <button class="full-card__btn button">
+        Длбавить в карзину<svg
+          width="6"
+          height="10"
+          viewBox="0 0 6 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M5.36529 5.56549C5.67771 5.25307 5.67771 4.74654 5.36529 4.43412L1.36529 0.434119C1.05288 0.1217 0.546343 0.1217 0.233924 0.434119C-0.0784959 0.746538 -0.0784959 1.25307 0.233924 1.56549L3.66824 4.9998L0.233924 8.43412C-0.0784955 8.74654 -0.0784955 9.25307 0.233924 9.56549C0.546343 9.87791 1.05288 9.87791 1.36529 9.56549L5.36529 5.56549Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+          <div class="tab-for-full-card">
+  <div class="tab-for-full-card__top">
+    <div class="container">
+      <div class="tab-for-full-card__list">
+        <button class="tab-for-full-card__item" data-tab="1">Доставка</button>
+        <button class="tab-for-full-card__item" data-tab="2">Оплата</button>
+        <button class="tab-for-full-card__item" data-tab="3">FAQ</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="tab-for-full-card__body" data-tab="1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit adipisci
+      iste impedit id, soluta nesciunt veniam molestias expedita odit odio
+      quidem corporis sequi voluptatum, libero veritatis tempore reiciendis
+      facere. Sint? Iusto ea perferendis expedita minus! Omnis illum distinctio
+      perspiciatis, dolorum ipsum fugiat reprehenderit accusantium, nobis
+      suscipit, beatae aliquid consequatur minus dignissimos iure! Porro
+      cupiditate fugit, unde a eveniet cum iusto! Laborum at expedita blanditiis
+      rerum cumque voluptas. Ipsum, alias quam accusantium dolorem fugiat
+      aspernatur itaque culpa asperiores exercitationem excepturi doloribus,
+      suscipit veniam velit, rerum esse quae quia ipsa iure nemo. Facere quae
+      reprehenderit illo architecto modi ex possimus quasi ratione, facilis quam
+      assumenda, asperiores distinctio, quia hic! Modi nulla veniam numquam
+      libero consequatur id eos autem hic, accusantium sit aut! Quidem quae eum
+      deserunt aspernatur pariatur odit? Expedita illum laboriosam sint ut, quam
+      sed saepe maiores? Ducimus, et facilis? Ut delectus voluptas iure.
+      Voluptas sint voluptatum soluta optio error eveniet. Repudiandae facere
+      laudantium accusamus at sed voluptates dignissimos rerum ratione unde
+      consequuntur quisquam itaque ab doloremque quibusdam, iste asperiores
+      maxime fuga aliquam dolor alias maiores cum! Nobis commodi pariatur
+      provident.
+    </div>
+    <div class="tab-for-full-card__body" data-tab="2">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos aut
+      eaque, voluptatem aliquid ullam quisquam, laudantium ratione consectetur
+      cumque quas reiciendis labore blanditiis asperiores quaerat repellendus
+      vel quia? Possimus, nostrum. Culpa inventore praesentium tempora? Illo
+      aspernatur nemo earum dicta, sint possimus quod amet ullam iste nulla
+      soluta corporis sunt accusamus consequuntur dolorum sit, perferendis vitae
+      quae provident laboriosam ratione dignissimos! Ratione voluptatem
+      mollitia, quam error illum ex vel? Blanditiis, ipsum accusamus
+      necessitatibus quidem veniam suscipit animi debitis numquam, tenetur
+      corrupti cupiditate repellat magnam tempora sed quae aliquid atque, cumque
+      laudantium! Iste nesciunt optio eligendi consectetur est? Iure quis, vero
+      velit sint, aut, dolorem quisquam iusto unde sit nostrum assumenda
+      reiciendis praesentium earum est possimus culpa mollitia perferendis
+      exercitationem aperiam? Quis!
+    </div>
+    <div class="tab-for-full-card__body" data-tab="3">
+      <div class="tab-for-full-card-fac">
+        <div class="tab-for-full-card-fac__item">
+          <button class="tab-for-full-card-fac__trigger">
+            <p>Вопрос 1</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="#121214"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="tab-for-full-card-fac__body text-WYSIWYG">
+            <h2>Введение в современный веб-дизайн</h2>
+            <p>
+              Создание сайта в XXI веке — это гораздо больше, чем просто
+              написание кода. Это <strong>искусство</strong> сочетать эстетику с
+              функциональностью, чтобы предоставить пользователю незабываемый
+              опыт. Современный веб-дизайн основывается на нескольких ключевых
+              принципах, которые отличают посредственный сайт от выдающегося.
+            </p>
+            <p>
+              Понимание этих принципов <em>крайне важно</em> для любого, кто
+              работает в digital-сфере: будь вы маркетолог, копирайтер или
+              backend-разработчик. В этой статье мы рассмотрим основные столпы,
+              на которых держится хороший дизайн.
+            </p>
+            <h3>Ключевые принципы UI/UX дизайна</h3>
+            <p>
+              Пользовательский интерфейс (UI) и пользовательский опыт (UX) идут
+              рука об руку. Вот что делает их по-настоящему эффективными:
+            </p>
+            <ul>
+              <li>
+                <strong>Простота и интуитивность:</strong> Пользователь не
+                должен гадать, как использовать ваш сайт. Навигация и
+                интерфейсные элементы должны быть предсказуемыми и понятными.
+              </li>
+              <li>
+                <strong>Визуальная иерархия:</strong> Правильное использование
+                размера, цвета и контраста позволяет направить внимание
+                пользователя к самым важным элементам на странице.
+              </li>
+              <li>
+                <strong>Консистентность:</strong> Шрифты, цвета и стили
+                элементов должны быть единообразны на всех страницах сайта. Это
+                создает чувство цельности и профессиональности.
+              </li>
+              <li>
+                <strong>Отзывчивость (Responsiveness):</strong> В эпоху
+                мобильных устройств сайт обязан идеально работать и выглядеть на
+                экране любого размера.
+              </li>
+            </ul>
+            <h3>Технические аспекты разработки</h3>
+            <p>
+              Красивый дизайн бесполезен, если он не подкреплен качественной
+              технической реализацией. Основу фронтенда современного веба
+              составляют три кита:
+            </p>
+            <ol>
+              <li>
+                <strong>HTML (HyperText Markup Language)</strong> — это каркас
+                вашей страницы. Он определяет структуру контента: заголовки,
+                абзацы, списки, ссылки и изображения.
+              </li>
+              <li>
+                <strong>CSS (Cascading Style Sheets)</strong> — это язык стилей,
+                который превращает скучный HTML-каркас в визуально
+                привлекательную страницу. Он контролирует цвета, шрифты,
+                расположение блоков и анимацию.
+              </li>
+              <li>
+                <strong>JavaScript</strong> — это то, что делает ваш сайт
+                интерактивным. От простых слайдеров до сложных одностраничных
+                приложений (SPA) — всё это заслуга JavaScript.
+              </li>
+            </ol>
+            <p>
+              Глубокая оптимизация каждого из этих аспектов напрямую влияет на
+              <em>скорость загрузки</em>, а значит, и на позиции в поисковой
+              выдаче, и на удовлетворенность пользователей.
+            </p>
+            <h3>Заключение</h3>
+            <p>
+              Создание успешного веб-продукта — это всегда командная работа и
+              внимание к деталям. Не существует единственно правильного ответа
+              на вопрос, как должен выглядеть идеальный сайт, но есть
+              проверенные временем практики и принципы, которые служат надежным
+              компасом в мире веб-разработки.
+            </p>
+            <p>
+              Постоянное обучение и адаптация к новым тенденциям —
+              <strong>единственный путь</strong> оставаться востребованным
+              специалистом и создавать по-настоящему качественные
+              digital-продукты.
+            </p>
+          </div>
+        </div>
+        <div class="tab-for-full-card-fac__item">
+          <button class="tab-for-full-card-fac__trigger">
+            <p>вопрос 2</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="#121214"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="tab-for-full-card-fac__body text-WYSIWYG">
+            <h2>Введение в современный веб-дизайн</h2>
+            <p>
+              Создание сайта в XXI веке — это гораздо больше, чем просто
+              написание кода. Это <strong>искусство</strong> сочетать эстетику с
+              функциональностью, чтобы предоставить пользователю незабываемый
+              опыт. Современный веб-дизайн основывается на нескольких ключевых
+              принципах, которые отличают посредственный сайт от выдающегося.
+            </p>
+            <p>
+              Понимание этих принципов <em>крайне важно</em> для любого, кто
+              работает в digital-сфере: будь вы маркетолог, копирайтер или
+              backend-разработчик. В этой статье мы рассмотрим основные столпы,
+              на которых держится хороший дизайн.
+            </p>
+            <h3>Ключевые принципы UI/UX дизайна</h3>
+            <p>
+              Пользовательский интерфейс (UI) и пользовательский опыт (UX) идут
+              рука об руку. Вот что делает их по-настоящему эффективными:
+            </p>
+            <ul>
+              <li>
+                <strong>Простота и интуитивность:</strong> Пользователь не
+                должен гадать, как использовать ваш сайт. Навигация и
+                интерфейсные элементы должны быть предсказуемыми и понятными.
+              </li>
+              <li>
+                <strong>Визуальная иерархия:</strong> Правильное использование
+                размера, цвета и контраста позволяет направить внимание
+                пользователя к самым важным элементам на странице.
+              </li>
+              <li>
+                <strong>Консистентность:</strong> Шрифты, цвета и стили
+                элементов должны быть единообразны на всех страницах сайта. Это
+                создает чувство цельности и профессиональности.
+              </li>
+              <li>
+                <strong>Отзывчивость (Responsiveness):</strong> В эпоху
+                мобильных устройств сайт обязан идеально работать и выглядеть на
+                экране любого размера.
+              </li>
+            </ul>
+            <h3>Технические аспекты разработки</h3>
+            <p>
+              Красивый дизайн бесполезен, если он не подкреплен качественной
+              технической реализацией. Основу фронтенда современного веба
+              составляют три кита:
+            </p>
+            <ol>
+              <li>
+                <strong>HTML (HyperText Markup Language)</strong> — это каркас
+                вашей страницы. Он определяет структуру контента: заголовки,
+                абзацы, списки, ссылки и изображения.
+              </li>
+              <li>
+                <strong>CSS (Cascading Style Sheets)</strong> — это язык стилей,
+                который превращает скучный HTML-каркас в визуально
+                привлекательную страницу. Он контролирует цвета, шрифты,
+                расположение блоков и анимацию.
+              </li>
+              <li>
+                <strong>JavaScript</strong> — это то, что делает ваш сайт
+                интерактивным. От простых слайдеров до сложных одностраничных
+                приложений (SPA) — всё это заслуга JavaScript.
+              </li>
+            </ol>
+            <p>
+              Глубокая оптимизация каждого из этих аспектов напрямую влияет на
+              <em>скорость загрузки</em>, а значит, и на позиции в поисковой
+              выдаче, и на удовлетворенность пользователей.
+            </p>
+            <h3>Заключение</h3>
+            <p>
+              Создание успешного веб-продукта — это всегда командная работа и
+              внимание к деталям. Не существует единственно правильного ответа
+              на вопрос, как должен выглядеть идеальный сайт, но есть
+              проверенные временем практики и принципы, которые служат надежным
+              компасом в мире веб-разработки.
+            </p>
+            <p>
+              Постоянное обучение и адаптация к новым тенденциям —
+              <strong>единственный путь</strong> оставаться востребованным
+              специалистом и создавать по-настоящему качественные
+              digital-продукты.
+            </p>
+          </div>
+        </div>
+        <div class="tab-for-full-card-fac__item">
+          <button class="tab-for-full-card-fac__trigger">
+            <p>вопрос 3</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="#121214"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="tab-for-full-card-fac__body text-WYSIWYG">
+            <h2>Введение в современный веб-дизайн</h2>
+            <p>
+              Создание сайта в XXI веке — это гораздо больше, чем просто
+              написание кода. Это <strong>искусство</strong> сочетать эстетику с
+              функциональностью, чтобы предоставить пользователю незабываемый
+              опыт. Современный веб-дизайн основывается на нескольких ключевых
+              принципах, которые отличают посредственный сайт от выдающегося.
+            </p>
+            <p>
+              Понимание этих принципов <em>крайне важно</em> для любого, кто
+              работает в digital-сфере: будь вы маркетолог, копирайтер или
+              backend-разработчик. В этой статье мы рассмотрим основные столпы,
+              на которых держится хороший дизайн.
+            </p>
+            <h3>Ключевые принципы UI/UX дизайна</h3>
+            <p>
+              Пользовательский интерфейс (UI) и пользовательский опыт (UX) идут
+              рука об руку. Вот что делает их по-настоящему эффективными:
+            </p>
+            <ul>
+              <li>
+                <strong>Простота и интуитивность:</strong> Пользователь не
+                должен гадать, как использовать ваш сайт. Навигация и
+                интерфейсные элементы должны быть предсказуемыми и понятными.
+              </li>
+              <li>
+                <strong>Визуальная иерархия:</strong> Правильное использование
+                размера, цвета и контраста позволяет направить внимание
+                пользователя к самым важным элементам на странице.
+              </li>
+              <li>
+                <strong>Консистентность:</strong> Шрифты, цвета и стили
+                элементов должны быть единообразны на всех страницах сайта. Это
+                создает чувство цельности и профессиональности.
+              </li>
+              <li>
+                <strong>Отзывчивость (Responsiveness):</strong> В эпоху
+                мобильных устройств сайт обязан идеально работать и выглядеть на
+                экране любого размера.
+              </li>
+            </ul>
+            <h3>Технические аспекты разработки</h3>
+            <p>
+              Красивый дизайн бесполезен, если он не подкреплен качественной
+              технической реализацией. Основу фронтенда современного веба
+              составляют три кита:
+            </p>
+            <ol>
+              <li>
+                <strong>HTML (HyperText Markup Language)</strong> — это каркас
+                вашей страницы. Он определяет структуру контента: заголовки,
+                абзацы, списки, ссылки и изображения.
+              </li>
+              <li>
+                <strong>CSS (Cascading Style Sheets)</strong> — это язык стилей,
+                который превращает скучный HTML-каркас в визуально
+                привлекательную страницу. Он контролирует цвета, шрифты,
+                расположение блоков и анимацию.
+              </li>
+              <li>
+                <strong>JavaScript</strong> — это то, что делает ваш сайт
+                интерактивным. От простых слайдеров до сложных одностраничных
+                приложений (SPA) — всё это заслуга JavaScript.
+              </li>
+            </ol>
+            <p>
+              Глубокая оптимизация каждого из этих аспектов напрямую влияет на
+              <em>скорость загрузки</em>, а значит, и на позиции в поисковой
+              выдаче, и на удовлетворенность пользователей.
+            </p>
+            <h3>Заключение</h3>
+            <p>
+              Создание успешного веб-продукта — это всегда командная работа и
+              внимание к деталям. Не существует единственно правильного ответа
+              на вопрос, как должен выглядеть идеальный сайт, но есть
+              проверенные временем практики и принципы, которые служат надежным
+              компасом в мире веб-разработки.
+            </p>
+            <p>
+              Постоянное обучение и адаптация к новым тенденциям —
+              <strong>единственный путь</strong> оставаться востребованным
+              специалистом и создавать по-настоящему качественные
+              digital-продукты.
+            </p>
+          </div>
+        </div>
+        <div class="tab-for-full-card-fac__item">
+          <button class="tab-for-full-card-fac__trigger">
+            <p>вопрос 4</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="#121214"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="tab-for-full-card-fac__body text-WYSIWYG">
+            <h2>Введение в современный веб-дизайн</h2>
+            <p>
+              Создание сайта в XXI веке — это гораздо больше, чем просто
+              написание кода. Это <strong>искусство</strong> сочетать эстетику с
+              функциональностью, чтобы предоставить пользователю незабываемый
+              опыт. Современный веб-дизайн основывается на нескольких ключевых
+              принципах, которые отличают посредственный сайт от выдающегося.
+            </p>
+            <p>
+              Понимание этих принципов <em>крайне важно</em> для любого, кто
+              работает в digital-сфере: будь вы маркетолог, копирайтер или
+              backend-разработчик. В этой статье мы рассмотрим основные столпы,
+              на которых держится хороший дизайн.
+            </p>
+            <h3>Ключевые принципы UI/UX дизайна</h3>
+            <p>
+              Пользовательский интерфейс (UI) и пользовательский опыт (UX) идут
+              рука об руку. Вот что делает их по-настоящему эффективными:
+            </p>
+            <ul>
+              <li>
+                <strong>Простота и интуитивность:</strong> Пользователь не
+                должен гадать, как использовать ваш сайт. Навигация и
+                интерфейсные элементы должны быть предсказуемыми и понятными.
+              </li>
+              <li>
+                <strong>Визуальная иерархия:</strong> Правильное использование
+                размера, цвета и контраста позволяет направить внимание
+                пользователя к самым важным элементам на странице.
+              </li>
+              <li>
+                <strong>Консистентность:</strong> Шрифты, цвета и стили
+                элементов должны быть единообразны на всех страницах сайта. Это
+                создает чувство цельности и профессиональности.
+              </li>
+              <li>
+                <strong>Отзывчивость (Responsiveness):</strong> В эпоху
+                мобильных устройств сайт обязан идеально работать и выглядеть на
+                экране любого размера.
+              </li>
+            </ul>
+            <h3>Технические аспекты разработки</h3>
+            <p>
+              Красивый дизайн бесполезен, если он не подкреплен качественной
+              технической реализацией. Основу фронтенда современного веба
+              составляют три кита:
+            </p>
+            <ol>
+              <li>
+                <strong>HTML (HyperText Markup Language)</strong> — это каркас
+                вашей страницы. Он определяет структуру контента: заголовки,
+                абзацы, списки, ссылки и изображения.
+              </li>
+              <li>
+                <strong>CSS (Cascading Style Sheets)</strong> — это язык стилей,
+                который превращает скучный HTML-каркас в визуально
+                привлекательную страницу. Он контролирует цвета, шрифты,
+                расположение блоков и анимацию.
+              </li>
+              <li>
+                <strong>JavaScript</strong> — это то, что делает ваш сайт
+                интерактивным. От простых слайдеров до сложных одностраничных
+                приложений (SPA) — всё это заслуга JavaScript.
+              </li>
+            </ol>
+            <p>
+              Глубокая оптимизация каждого из этих аспектов напрямую влияет на
+              <em>скорость загрузки</em>, а значит, и на позиции в поисковой
+              выдаче, и на удовлетворенность пользователей.
+            </p>
+            <h3>Заключение</h3>
+            <p>
+              Создание успешного веб-продукта — это всегда командная работа и
+              внимание к деталям. Не существует единственно правильного ответа
+              на вопрос, как должен выглядеть идеальный сайт, но есть
+              проверенные временем практики и принципы, которые служат надежным
+              компасом в мире веб-разработки.
+            </p>
+            <p>
+              Постоянное обучение и адаптация к новым тенденциям —
+              <strong>единственный путь</strong> оставаться востребованным
+              специалистом и создавать по-настоящему качественные
+              digital-продукты.
+            </p>
+          </div>
+        </div>
+        <div class="tab-for-full-card-fac__item">
+          <button class="tab-for-full-card-fac__trigger">
+            <p>вопрос 5</p>
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="#121214"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="tab-for-full-card-fac__body text-WYSIWYG">
+            <h2>Введение в современный веб-дизайн</h2>
+            <p>
+              Создание сайта в XXI веке — это гораздо больше, чем просто
+              написание кода. Это <strong>искусство</strong> сочетать эстетику с
+              функциональностью, чтобы предоставить пользователю незабываемый
+              опыт. Современный веб-дизайн основывается на нескольких ключевых
+              принципах, которые отличают посредственный сайт от выдающегося.
+            </p>
+            <p>
+              Понимание этих принципов <em>крайне важно</em> для любого, кто
+              работает в digital-сфере: будь вы маркетолог, копирайтер или
+              backend-разработчик. В этой статье мы рассмотрим основные столпы,
+              на которых держится хороший дизайн.
+            </p>
+            <h3>Ключевые принципы UI/UX дизайна</h3>
+            <p>
+              Пользовательский интерфейс (UI) и пользовательский опыт (UX) идут
+              рука об руку. Вот что делает их по-настоящему эффективными:
+            </p>
+            <ul>
+              <li>
+                <strong>Простота и интуитивность:</strong> Пользователь не
+                должен гадать, как использовать ваш сайт. Навигация и
+                интерфейсные элементы должны быть предсказуемыми и понятными.
+              </li>
+              <li>
+                <strong>Визуальная иерархия:</strong> Правильное использование
+                размера, цвета и контраста позволяет направить внимание
+                пользователя к самым важным элементам на странице.
+              </li>
+              <li>
+                <strong>Консистентность:</strong> Шрифты, цвета и стили
+                элементов должны быть единообразны на всех страницах сайта. Это
+                создает чувство цельности и профессиональности.
+              </li>
+              <li>
+                <strong>Отзывчивость (Responsiveness):</strong> В эпоху
+                мобильных устройств сайт обязан идеально работать и выглядеть на
+                экране любого размера.
+              </li>
+            </ul>
+            <h3>Технические аспекты разработки</h3>
+            <p>
+              Красивый дизайн бесполезен, если он не подкреплен качественной
+              технической реализацией. Основу фронтенда современного веба
+              составляют три кита:
+            </p>
+            <ol>
+              <li>
+                <strong>HTML (HyperText Markup Language)</strong> — это каркас
+                вашей страницы. Он определяет структуру контента: заголовки,
+                абзацы, списки, ссылки и изображения.
+              </li>
+              <li>
+                <strong>CSS (Cascading Style Sheets)</strong> — это язык стилей,
+                который превращает скучный HTML-каркас в визуально
+                привлекательную страницу. Он контролирует цвета, шрифты,
+                расположение блоков и анимацию.
+              </li>
+              <li>
+                <strong>JavaScript</strong> — это то, что делает ваш сайт
+                интерактивным. От простых слайдеров до сложных одностраничных
+                приложений (SPA) — всё это заслуга JavaScript.
+              </li>
+            </ol>
+            <p>
+              Глубокая оптимизация каждого из этих аспектов напрямую влияет на
+              <em>скорость загрузки</em>, а значит, и на позиции в поисковой
+              выдаче, и на удовлетворенность пользователей.
+            </p>
+            <h3>Заключение</h3>
+            <p>
+              Создание успешного веб-продукта — это всегда командная работа и
+              внимание к деталям. Не существует единственно правильного ответа
+              на вопрос, как должен выглядеть идеальный сайт, но есть
+              проверенные временем практики и принципы, которые служат надежным
+              компасом в мире веб-разработки.
+            </p>
+            <p>
+              Постоянное обучение и адаптация к новым тенденциям —
+              <strong>единственный путь</strong> оставаться востребованным
+              специалистом и создавать по-настоящему качественные
+              digital-продукты.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <!-- br -->
+          <div class="container">
+            <div class="page-full-card__slider-bottom">
+              <div class="swiper slider-demo-category">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+    <div class="swiper-slide">
+      <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="slider-demo-category__navigation">
+    <div class="slider-demo-category__button-prev">
+      <svg
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 13L1 7L7 1"
+          stroke="#121214"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <div class="slider-demo-category__pagination"></div>
+    <div class="slider-demo-category__button-next">
+      <svg
+        width="8"
+        height="14"
+        viewBox="0 0 8 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 13L7 7L1 1"
+          stroke="#121214"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer start -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__columns">
+        <div class="footer__column footer__dropdown">
+          <p class="footer__column-title">
+            Каталог
+            <svg
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                fill="white"
+              />
+            </svg>
+          </p>
+          <ul class="footer__list">
+            <li>
+              <a href="#">бренд</a>
+            </li>
+            <li>
+              <a href="#">бренд</a>
+            </li>
+            <li>
+              <a href="#">бренд</a>
+            </li>
+            <li>
+              <a href="#">бренд</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column footer__dropdown">
+          <p class="footer__column-title">
+            Помощь
+            <svg
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                fill="white"
+              />
+            </svg>
+          </p>
+          <ul class="footer__list">
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Оплата</a>
+            </li>
+            <li>
+              <a href="#">гарантия</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <p class="footer__column-title">Контакты</p>
+          <ul class="footer__list">
+            <li class="footer__mail">
+              <a href="#">info@xwear.info</a>
+            </li>
+            <li class="footer__phone">
+              <a href="tel:79936083885">+7 993 608 38 85</a>
+            </li>
+          </ul>
+          <div class="footer__icons">
+            <p class="footer__icons-title">Мессенджеры</p>
+            <div class="footer__icons-flex">
+              <a href="#"
+                ><img src="assets/images/icons/watsap.svg" alt="watsap"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/icons/telegram.svg" alt="telegram"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__icons">
+            <p class="footer__icons-title">Наши соц.сети</p>
+            <div class="footer__icons-flex">
+              <a href="#"><img src="assets/images/icons/vk.svg" alt="vk" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+
+
+    <script src="assets/libs/nouislider/nouislider.min.js"></script>
+    <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

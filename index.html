@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Template-vite.1.0.</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="burger-menu header__burger">
+            <button class="burger-menu__button"></button>
+          </div>
+          <a href="index.html"
+            ><img
+              class="header__logo"
+              src="assets/images/placeholder.svg"
+              alt="logo"
+              width="80"
+              height="60"
+          /></a>
+
+          <nav class="header__navigation">
+            <ul>
+              <li>
+                <a href="catalog.html">Каталог</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Sail</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Ремешки</a>
+                <svg
+                  width="8"
+                  height="5"
+                  viewBox="0 0 8 5"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.3"
+                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
+                    fill="white"
+                  />
+                </svg>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Доставка</a>
+              </li>
+              <li>
+                <a href="#">Расчет стоимости</a>
+              </li>
+              <li>
+                <a href="#">Информация</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__icons">
+            <div class="header__icon">
+              <img src="assets/images/icons/seacrh.svg" alt="search" />
+            </div>
+            <!-- <a href="#" class="header__icon">
+          <img src="assets/images/icons/star.svg" alt="star" />
+        </a> -->
+            <a href="#" class="header__icon">
+              <img src="assets/images/icons/profile.svg" alt="profile" />
+            </a>
+            <a href="#" class="header__icon">
+              <img src="assets/images/icons/cart.svg" alt="cart" />
+              <p class="header__cart-price">11 899 ₽</p>
+              <p class="header__numbers">7</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main>
+      <div class="swiper slider-hero">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="hero-slider-item">
+              <img
+                src="assets/images/placeholder.svg"
+                class="hero-slider-item__img"
+                alt="img"
+              />
+
+              <div class="hero-slider-item__wrapper">
+                <h2 class="hero-slider-item__title">
+                  Широкий ассортимент Одежды
+                </h2>
+                <h3 class="hero-slider-item__subtitle">
+                  Одежда от известные брендов у нас в каталоге. Только
+                  качественные вещи.
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="hero-slider-item">
+              <img
+                src="assets/images/placeholder.svg"
+                class="hero-slider-item__img"
+                alt="img"
+              />
+
+              <div class="hero-slider-item__wrapper">
+                <h2 class="hero-slider-item__title">
+                  Широкий ассортимент Одежды
+                </h2>
+                <h3 class="hero-slider-item__subtitle">
+                  Одежда от известные брендов у нас в каталоге. Только
+                  качественные вещи.
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="hero-slider-item">
+              <img
+                src="assets/images/placeholder.svg"
+                class="hero-slider-item__img"
+                alt="img"
+              />
+
+              <div class="hero-slider-item__wrapper">
+                <h2 class="hero-slider-item__title">
+                  Широкий ассортимент Одежды
+                </h2>
+                <h3 class="hero-slider-item__subtitle">
+                  Одежда от известные брендов у нас в каталоге. Только
+                  качественные вещи.
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="hero-slider-item">
+              <img
+                src="assets/images/placeholder.svg"
+                class="hero-slider-item__img"
+                alt="img"
+              />
+
+              <div class="hero-slider-item__wrapper">
+                <h2 class="hero-slider-item__title">
+                  Широкий ассортимент Одежды
+                </h2>
+                <h3 class="hero-slider-item__subtitle">
+                  Одежда от известные брендов у нас в каталоге. Только
+                  качественные вещи.
+                </h3>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="slider-hero__pagination"></div>
+      </div>
+
+      <!-- br -->
+      <div class="section-for-main1">
+        <div class="container">
+          <div class="section-for-main1__wrapper">
+            <!-- <h2 class="section-for-main1__title">бренд</h2> -->
+            <img
+              src="/assets/images/logo-plasholder.svg"
+              class="section-for-main1__logo"
+              alt=""
+            />
+            <!-- <a href="#" class="section-for-main1__link">смотреть больше</a> -->
+            <div class="section-for-main1__body">
+              <div class="section-for-main1__img-left">
+                <!-- <img src="/assets/images/model1.webp" alt="#" /> -->
+                <!-- <img src="/assets/images/model2.jpg" alt="#" /> -->
+                <img src="/assets/images/model3.webp" alt="#" />
+              </div>
+
+              <div class="section-for-main1__products-wrapper">
+                <div class="section-for-main1__grid">
+                  <div class="section-for-main1__grid--item">
+                    <div class="card-product">
+                      <div class="card-product__img">
+                        <img
+                          src="/assets/images/preview_GA_110JAH22_2A.webp"
+                          alt="img"
+                        />
+                      </div>
+
+                      <h3 class="title-card card-product__title">
+                        Nike Court Zoom Cage 2
+                      </h3>
+                      <div class="card-product__price">
+                        <p class="card-product__price--old off">200 BUN</p>
+                        <p class="card-product__price--new">100 BUN</p>
+                      </div>
+                      <a href="page-full-card.html"></a>
+                    </div>
+                  </div>
+                  <div class="section-for-main1__grid--item">
+                    <div class="card-product">
+                      <div class="card-product__img">
+                        <img
+                          src="/assets/images/preview_GA_110JAH22_2A.webp"
+                          alt="img"
+                        />
+                      </div>
+
+                      <h3 class="title-card card-product__title">
+                        Nike Court Zoom Cage 2
+                      </h3>
+                      <div class="card-product__price">
+                        <p class="card-product__price--old off">200 BUN</p>
+                        <p class="card-product__price--new">100 BUN</p>
+                      </div>
+                      <a href="page-full-card.html"></a>
+                    </div>
+                  </div>
+                  <div class="section-for-main1__grid--item">
+                    <div class="card-product">
+                      <div class="card-product__img">
+                        <img
+                          src="/assets/images/preview_GA_110JAH22_2A.webp"
+                          alt="img"
+                        />
+                      </div>
+
+                      <h3 class="title-card card-product__title">
+                        Nike Court Zoom Cage 2
+                      </h3>
+                      <div class="card-product__price">
+                        <p class="card-product__price--old off">200 BUN</p>
+                        <p class="card-product__price--new">100 BUN</p>
+                      </div>
+                      <a href="page-full-card.html"></a>
+                    </div>
+                  </div>
+                  <div class="section-for-main1__grid--item">
+                    <div class="card-product">
+                      <div class="card-product__img">
+                        <img
+                          src="/assets/images/preview_GA_110JAH22_2A.webp"
+                          alt="img"
+                        />
+                      </div>
+
+                      <h3 class="title-card card-product__title">
+                        Nike Court Zoom Cage 2
+                      </h3>
+                      <div class="card-product__price">
+                        <p class="card-product__price--old off">200 BUN</p>
+                        <p class="card-product__price--new">100 BUN</p>
+                      </div>
+                      <a href="page-full-card.html"></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="section-for-main1__one-item">
+            <div class="card-product">
+  <div class="card-product__img">
+    <img src="/assets/images/preview_GA_110JAH22_2A.webp" alt="img" />
+  </div>
+
+  <h3 class="title-card card-product__title">Nike Court Zoom Cage 2</h3>
+  <div class="card-product__price">
+    <p class="card-product__price--old off">200 BUN</p>
+    <p class="card-product__price--new">100 BUN</p>
+  </div>
+  <a href="page-full-card.html"></a>
+</div>
+
+          </div> -->
+              </div>
+            </div>
+            <div class="section-for-main1__slider">
+              <section class="sec-demo-catalog">
+                <div class="sec-demo-catalog__wrapper">
+                  <div class="sec-demo-catalog__category">
+                    <div class="sec-demo-catalog__header">
+                      <h2
+                        class="sec-demo-catalog__category-title title-section"
+                      >
+                        Обувь
+                      </h2>
+                      <a href="#" class="sec-demo-catalog__link-more">
+                        больше товаров
+                        <svg
+                          width="6"
+                          height="11"
+                          viewBox="0 0 6 11"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M5.36529 6.06549C5.67771 5.75307 5.67771 5.24654 5.36529 4.93412L1.36529 0.934119C1.05288 0.6217 0.546343 0.6217 0.233924 0.934119C-0.0784959 1.24654 -0.0784959 1.75307 0.233924 2.06549L3.66824 5.4998L0.233924 8.93412C-0.0784955 9.24654 -0.0784955 9.75307 0.233924 10.0655C0.546343 10.3779 1.05288 10.3779 1.36529 10.0655L5.36529 6.06549Z"
+                            fill="#121214"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="swiper slider-demo-category">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="card-product">
+                            <div class="card-product__img">
+                              <img
+                                src="/assets/images/preview_GA_110JAH22_2A.webp"
+                                alt="img"
+                              />
+                            </div>
+
+                            <h3 class="title-card card-product__title">
+                              Nike Court Zoom Cage 2
+                            </h3>
+                            <div class="card-product__price">
+                              <p class="card-product__price--old off">
+                                200 BUN
+                              </p>
+                              <p class="card-product__price--new">100 BUN</p>
+                            </div>
+                            <a href="page-full-card.html"></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="slider-demo-category__navigation">
+                        <div class="slider-demo-category__button-prev">
+                          <svg
+                            width="8"
+                            height="14"
+                            viewBox="0 0 8 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13L1 7L7 1"
+                              stroke="#121214"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div class="slider-demo-category__pagination"></div>
+                        <div class="slider-demo-category__button-next">
+                          <svg
+                            width="8"
+                            height="14"
+                            viewBox="0 0 8 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 13L7 7L1 1"
+                              stroke="#121214"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__columns">
+            <div class="footer__column footer__dropdown">
+              <p class="footer__column-title">
+                Каталог
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </p>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+                <li>
+                  <a href="#">бренд</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column footer__dropdown">
+              <p class="footer__column-title">
+                Помощь
+                <svg
+                  width="12"
+                  height="8"
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </p>
+              <ul class="footer__list">
+                <li>
+                  <a href="#">Доставка</a>
+                </li>
+                <li>
+                  <a href="#">Оплата</a>
+                </li>
+                <li>
+                  <a href="#">гарантия</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <p class="footer__column-title">Контакты</p>
+              <ul class="footer__list">
+                <li class="footer__mail">
+                  <a href="#">info@xwear.info</a>
+                </li>
+                <li class="footer__phone">
+                  <a href="tel:79936083885">+7 993 608 38 85</a>
+                </li>
+              </ul>
+              <div class="footer__icons">
+                <p class="footer__icons-title">Мессенджеры</p>
+                <div class="footer__icons-flex">
+                  <a href="#"
+                    ><img src="assets/images/icons/watsap.svg" alt="watsap"
+                  /></a>
+                  <a href="#"
+                    ><img src="assets/images/icons/telegram.svg" alt="telegram"
+                  /></a>
+                </div>
+              </div>
+              <div class="footer__icons">
+                <p class="footer__icons-title">Наши соц.сети</p>
+                <div class="footer__icons-flex">
+                  <a href="#"
+                    ><img src="assets/images/icons/vk.svg" alt="vk"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script src="assets/libs/nouislider/nouislider.min.js"></script>
+    <script src="assets/libs/slim-select/slimselect.min.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

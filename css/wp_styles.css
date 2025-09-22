@@ -1,0 +1,8 @@
+.sidebar-filter__color-exemple {
+  border: 1px solid #838383;
+  width: 24px;
+  height: 24px;
+}
+.sidebar-filter__color {
+  cursor: pointer;
+}

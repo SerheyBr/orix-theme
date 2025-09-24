@@ -166,8 +166,9 @@ function my_filter_products() {
         return $arg;
     }
 
-    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    // $paged = $_GET-> : 1;
+    // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    // сюда вставить get page 
+    $paged = $_GET['page'] ? $_GET['page'] : 1;
     $arg = array(
         'post_type' => 'product',
         'posts_per_page' => '5',
@@ -269,25 +270,34 @@ function my_filter_products() {
     // 2222222222222222222222222222222222222222222222222222222222222222222222222222222
 
     // 3333333333
+    // ob_start();
+
+    // $arg_pagination = array(
+    //     'total' => $query->max_num_pages,
+    // );
+
+    // echo paginate_links($arg_pagination);
+    // $render_pagination_2 = ob_get_clean(); 
+
     ob_start();
 
-    $arg_pagination = array(
-        'total' => $query->max_num_pages,
-    );
+    $total_pages_value = $query->max_num_pages;
+    $num_page = $paged;             
+    include 'templates/pagination.php' ;
 
-    echo paginate_links($arg_pagination);
     $render_pagination_2 = ob_get_clean(); 
     // 333333333333
 
     $result = $query->found_posts;
    
+
+    
     wp_send_json([
     'posts' => $render_posts,
     'pagination' =>  $render_pagination,
     'resultNum' => $result,
     'arg' => $arg,
     'paginationNew' =>  $render_pagination_2,
-    'get' => $GET,
     ]);
 
     wp_die(); // обязательно, чтобы завершить AJAX-запрос

@@ -9,3 +9,21 @@
 .catalog-content {
   flex: 1 1 100%;
 }
+
+.catalog-content__page-num {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.catalog-content__page-num:hover {
+  background: #49d0ff;
+  color: #fff;
+}
+.catalog-content__page-num.is-active {
+  background: #49d1ff76;
+}

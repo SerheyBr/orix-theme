@@ -209,16 +209,17 @@
 
               <div id=pagination>
                <?php
-                  $arg_pagination = array(
-                    'total' => $query->max_num_pages,
-                  );
+                  // $arg_pagination = array(
+                  //   'total' => $query->max_num_pages,
+                  // );
 
-                  echo paginate_links($arg_pagination);
-                  // include 'templates/pagination.php' ;
+                  $total_pages_value = $query->max_num_pages;
+                  
+                  include 'templates/pagination.php' ;
                 ?>
               </div>
-              <p>page - <?php echo $paged;?></p>
               </div> 
+            
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(myShopFilters.ajax_url + "?" + params.toString() + `&page=${numPage}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.arg);
+        console.log(data.get);
         content.innerHTML = data.posts;
         // pagination.innerHTML = data.pagination;
         paginationWrapper.innerHTML = data.paginationNew;
@@ -26,15 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     rrr(1);
   });
 
-  paginationWrapper.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
-      e.preventDefault();
+  // const btn = document.querySelector(".ddd");
+  // btn.addEventListener("click", (e) => {
+  //   console.log("asd");
+  //   rrr(2);
+  // });
 
-      // Достаём номер страницы из href
-      const url = new URL(e.target.href);
-      const page = url.searchParams.get("paged") || 1;
-      console.log("asdasd", url);
-      rrr(page);
-    }
+  paginationWrapper.addEventListener("click", (e) => {
+    const click = e.target;
+    // if(click.dataset.page){
+
+    // }
+    console.log(click.dataset.page);
+    rrr(click.dataset.page);
   });
 });

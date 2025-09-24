@@ -150,7 +150,24 @@ function my_breadcrumbs() {
 
 // ajax обработчик
 function my_filter_products() {
+    function myshop_add_tax_filter($tax_namem, $arg){
+         $filter = isset($_GET[$tax_namem]) ? $_GET[$tax_namem] : [];
+
+        if(!empty($filter)){
+            $tax_query[] = array(
+                'taxonomy' => $tax_namem,
+                'field'    => 'slug',
+                'terms'    => $filter, // несколько терминов одной таксономии
+                'operator' => 'IN',
+            );
+
+            $arg['tax_query'][] = $tax_query;
+        }
+        return $arg;
+    }
+
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    // $paged = $_GET-> : 1;
     $arg = array(
         'post_type' => 'product',
         'posts_per_page' => '5',
@@ -160,46 +177,13 @@ function my_filter_products() {
     $tax_query = array(
         'relation' => 'AND',
     );
-
-    $colors = isset($_GET['pa_color']) ? $_GET['pa_color'] : [];
-
-    if(!empty($colors)){
-        $tax_query[] = array(
-            'taxonomy' => 'pa_color',
-            'field'    => 'slug',
-            'terms'    => $colors, // несколько терминов одной таксономии
-            'operator' => 'IN',
-        );
-
-        $arg['tax_query'] = $tax_query;
-    }
-
-    $brands = isset($_GET['product_brand']) ? $_GET['product_brand'] : [];
-
-        if(!empty($brands)){
-        $tax_query[] = array(
-            'taxonomy' => 'product_brand',
-            'field'    => 'slug',
-            'terms'    => $brands, // несколько терминов одной таксономии
-            'operator' => 'IN',
-        );
-
-        $arg['tax_query'] = $tax_query;
-    }
-
-     $mechanism = isset($_GET['pa_mechanism']) ? $_GET['pa_mechanism'] : [];
-
-        if(!empty($mechanism)){
-        $tax_query[] = array(
-            'taxonomy' => 'pa_mechanism',
-            'field'    => 'slug',
-            'terms'    => $mechanism, // несколько терминов одной таксономии
-            'operator' => 'IN',
-        );
-
-        $arg['tax_query'] = $tax_query;
-    }
-
+    $arg = myshop_add_tax_filter('pa_color', $arg);
+    $arg = myshop_add_tax_filter('product_brand', $arg);
+    $arg = myshop_add_tax_filter('pa_mechanism', $arg);
+    $arg = myshop_add_tax_filter('pa_sex', $arg);
+    $arg = myshop_add_tax_filter('pa_style', $arg);
+    $arg = myshop_add_tax_filter('pa_material', $arg);
+    $arg = myshop_add_tax_filter('pa_finishing', $arg);
 
     $min_price = isset($_GET['min_price']) ? intval($_GET['min_price']) : 0;
     $max_price = isset($_GET['max_price']) ? intval($_GET['max_price']) : 0;
@@ -284,12 +268,26 @@ function my_filter_products() {
     $render_pagination = ob_get_clean();          
     // 2222222222222222222222222222222222222222222222222222222222222222222222222222222
 
+    // 3333333333
+    ob_start();
+
+    $arg_pagination = array(
+        'total' => $query->max_num_pages,
+    );
+
+    echo paginate_links($arg_pagination);
+    $render_pagination_2 = ob_get_clean(); 
+    // 333333333333
+
     $result = $query->found_posts;
    
     wp_send_json([
     'posts' => $render_posts,
     'pagination' =>  $render_pagination,
     'resultNum' => $result,
+    'arg' => $arg,
+    'paginationNew' =>  $render_pagination_2,
+    'get' => $GET,
     ]);
 
     wp_die(); // обязательно, чтобы завершить AJAX-запрос

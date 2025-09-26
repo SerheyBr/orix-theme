@@ -60,7 +60,7 @@
                 </ul>
               </li>
               <li>
-                <a href="<?php echo get_permalink(312); ?>">Sail</a>
+                <a href="<?php echo get_permalink(356); ?>">Sail</a>
                 <svg
                   width="8"
                   height="5"
@@ -80,7 +80,7 @@
                 </ul>
               </li>
               <li>
-                <a href="<?php echo get_permalink(312); ?>">Ремешки</a>
+                <a href="<?php echo get_permalink(354); ?>">Ремешки</a>
                 <svg
                   width="8"
                   height="5"

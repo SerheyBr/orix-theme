@@ -8,6 +8,9 @@
         'черный' => 'black',    
     );
     
+    if ( empty( $name_taxonomy ) ) {
+        $name_taxonomy = 'имя характеристики';
+    }
 ?>
 
 

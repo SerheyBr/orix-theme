@@ -1,5 +1,5 @@
  <?php 
-    //   Template name: шаблон Каталога
+    //   Template name: шаблон Каталог ремешков
     get_header(); 
     function render_filter_block($template, $taxonomy){
       $template_path = locate_template('templates/filters/'.$template.'.php');
@@ -20,24 +20,13 @@
     }
        
     $filters = array(
-      array('template' => 'filter-variant-2', 'taxanomy' => 'pa_color'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_mechanism'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'product_brand'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_sex'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_style'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_material'),
-      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_finishing'),
-
+      array('template' => 'filter-variant-2', 'taxanomy' => 'pa_strap_color'),
+      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_length'),
+      array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_width'),
     );
-
-    // $filters_staps = array(
-    //   array('template' => 'filter-variant-2', 'taxanomy' => 'pa_strap_color'),
-    //   array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_length'),
-    //   array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_width'),
-    // );
  ?>
 
- <main class="catalog watch">
+ <main class="catalog straps">
       <div class="container">
         <div class="breadcrumbs">
           <?php my_breadcrumbs();?>
@@ -56,7 +45,7 @@
                     array(
                       'taxonomy' => 'product_cat',
                       'field' => 'slug',
-                      'terms' => 'watch',
+                      'terms' => 'straps',
                     )
                   )
               );

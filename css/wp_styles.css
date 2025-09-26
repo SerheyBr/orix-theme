@@ -27,3 +27,29 @@
 .catalog-content__page-num.is-active {
   background: #49d1ff76;
 }
+
+.catalog-content__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.laoding {
+  background-color: #49d1ff55;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.laoding__gif {
+  width: 100px;
+  height: 100px;
+}

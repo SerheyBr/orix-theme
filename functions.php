@@ -150,34 +150,77 @@ function my_breadcrumbs() {
 
 // ajax обработчик
 function my_filter_products() {
-    function myshop_add_tax_filter($tax_namem, $arg){
-         $filter = isset($_GET[$tax_namem]) ? $_GET[$tax_namem] : [];
-
-        if(!empty($filter)){
-            $tax_query[] = array(
-                'taxonomy' => $tax_namem,
-                'field'    => 'slug',
-                'terms'    => $filter, // несколько терминов одной таксономии
-                'operator' => 'IN',
-            );
-
-            $arg['tax_query'][] = $tax_query;
-        }
-        return $arg;
-    }
-
-    // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-    // сюда вставить get page 
     $paged = $_GET['page'] ? $_GET['page'] : 1;
+    $sort_variant = $_GET['sort'] ? $_GET['sort'] : 3;
+    $category = $_GET['category'] ? $_GET['category'] : 'watch';
+    $is_sail = $_GET['sail'] ? $_GET['sail'] : false;
+
+  function myshop_add_tax_filter($tax_name, $arg){
+    $filter = isset($_GET[$tax_name]) ? (array) $_GET[$tax_name] : [];
+
+    if(!empty($filter)){
+        $arg['tax_query'][] = array(
+            'taxonomy' => $tax_name,
+            'field'    => 'slug',
+            'terms'    => $filter,
+            'operator' => 'IN',
+        );
+    }
+    return $arg;
+}
+
+
+    // $sort_param = array(
+    //     'meta_key' => '_price',
+    //     'orderby' => 'date',
+    //     // 'orderby'    => 'meta_value_num', // сортировка как по числу
+    //     'order' => 'DESC', //DESC | ASC
+    // )
+
+    $sort_param = array(
+        'meta_key' => '_price',
+        'orderby' => 'date',
+        // 'orderby'    => 'meta_value_num', // сортировка как по числу
+        'order' => 'DESC', //DESC | ASC
+    );
+
+
+   switch ( $sort_variant ) {
+    case 1:
+        $sort_param['orderby'] = 'meta_value_num';
+        $sort_param['order']   = 'ASC';
+        break;
+
+    case 2:
+        $sort_param['orderby'] = 'meta_value_num';
+        $sort_param['order']   = 'DESC';
+        break;
+
+    default:
+         $sort_param;
+        break;
+}
+
     $arg = array(
         'post_type' => 'product',
-        'posts_per_page' => '5',
+        'posts_per_page' => '20',
         'paged' => $paged,
     );
 
-    $tax_query = array(
-        'relation' => 'AND',
-    );
+    $arg = array_merge( $arg, $sort_param );
+    // $tax_query = array(
+    //     'relation' => 'AND',
+    // );
+
+ if ($category) {
+        $arg['tax_query'][] = array(
+            'taxonomy' => 'product_cat',
+            'field'    => 'slug',
+            'terms'    => $category,
+        );
+    }
+
+
     $arg = myshop_add_tax_filter('pa_color', $arg);
     $arg = myshop_add_tax_filter('product_brand', $arg);
     $arg = myshop_add_tax_filter('pa_mechanism', $arg);
@@ -185,6 +228,10 @@ function my_filter_products() {
     $arg = myshop_add_tax_filter('pa_style', $arg);
     $arg = myshop_add_tax_filter('pa_material', $arg);
     $arg = myshop_add_tax_filter('pa_finishing', $arg);
+    $arg = myshop_add_tax_filter('pa_strap_color', $arg);
+    $arg = myshop_add_tax_filter('pa_strap_length', $arg);
+    $arg = myshop_add_tax_filter('pa_strap_width', $arg);
+
 
     $min_price = isset($_GET['min_price']) ? intval($_GET['min_price']) : 0;
     $max_price = isset($_GET['max_price']) ? intval($_GET['max_price']) : 0;
@@ -205,11 +252,16 @@ function my_filter_products() {
 
         $arg['meta_query'][] = $range;
     }
-    // echo '<pre>';
-    // print_r( $_GET);
-    // echo '</pre>'; 
-   
-  
+
+
+    if($is_sail){
+         $arg['meta_query'][] = array(
+            'key'     => '_sale_price',
+            'value'   => 0,
+            'compare' => '>',
+            'type'    => 'NUMERIC',
+        );
+    }
 
     $query = new WP_Query($arg);
 //   1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
@@ -227,58 +279,36 @@ function my_filter_products() {
     $render_posts = ob_get_clean();
 //   1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
-    // 2222222222222222222222222222222222222222222222222222222222222222222222222222222 
-     ob_start();               
-    $total_pages = $query->max_num_pages;
+// 222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+    $sort_container = array(
+        'title' => "Сортировать &nbsp;<b data-sort='3'>От новых к старым</b>",
+        'list' => "<li data-sort='1'>От дешевых к дорогим</li>
+            <li data-sort='2'>От дорогих к дешевым</li>",
+    );
 
-    if ($total_pages > 1) {
+    switch ( $sort_variant ) {
+    case 1:
+        $sort_container['title'] = "Сортировать &nbsp;<b data-sort='1'>От дешевых к дорогим</b>";
+        $sort_container['list'] = "<li data-sort='3'>От новых к старым</li>
+            <li data-sort='2'>От дорогих к дешевым</li>";
+        break;
 
-        // Стрелка "назад"
-        if ($paged > 1) {
-            echo '<div class="catalog-content__pagination-arrow">
-                    <a href="' . get_pagenum_link($paged - 1) . '">
-                        <svg width="23" height="10" viewBox="0 0 23 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.54038 4.54038C0.286539 4.79422 0.286539 5.20578 0.54038 5.45962L4.67695 9.59619C4.9308 9.85003 5.34235 9.85003 5.59619 9.59619C5.85003 9.34235 5.85003 8.9308 5.59619 8.67696L1.91924 5L5.59619 1.32304C5.85003 1.0692 5.85003 0.657647 5.59619 0.403806C5.34235 0.149965 4.9308 0.149965 4.67695 0.403806L0.54038 4.54038ZM23 4.35L1 4.35V5.65L23 5.65V4.35Z" fill="black"/>
-                        </svg>
-                    </a>
-                </div>';
-        }
+    case 2:
+        $sort_container['title'] = "Сортировать &nbsp;<b data-sort='2'>От дорогих к дешевым</b>";
+        $sort_container['list'] = "<li data-sort='3'>От новых к старым</li>
+            <li data-sort='1'>От дешевых к дорогим</li>";
+        break;
 
-        // Номера страниц
-        echo '<div class="catalog-content__pagination-numbers">';
-        for ($i = 1; $i <= $total_pages; $i++) {
-            if ($i == $paged) {
-                echo '<span class="current">' . $i . '</span>';
-            } else {
-                echo '<a href="' . get_pagenum_link($i) . '">' . $i . '</a>';
-            }
-        }
-        echo '</div>';
-
-        // Стрелка "вперед"
-        if ($paged < $total_pages) {
-            echo '<div class="catalog-content__pagination-arrow">
-                    <a href="' . get_pagenum_link($paged + 1) . '">
-                        <svg width="23" height="10" viewBox="0 0 23 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.323 9.59624L22.4596 5.45967C22.7135 5.20583 22.7135 4.79427 22.4596 4.54043L18.323 0.403852C18.0692 0.150011 17.6576 0.150011 17.4038 0.403852C17.15 0.657693 17.15 1.06925 17.4038 1.32309L20.4308 4.35005L0 4.35005L0 5.65005L20.4308 5.65005L17.4038 8.677C17.15 8.93084 17.15 9.3424 17.4038 9.59624C17.6576 9.85008 18.0692 9.85008 18.323 9.59624Z" fill="#121214"/>
-                        </svg>
-                    </a>
-                </div>';
-        }
+    default:
+        $sort_container['title'] = "Сортировать &nbsp;<b data-sort='3'>От новых к старым</b>";
+        $sort_container['list'] = "<li data-sort='1'>От дешевых к дорогим</li>
+            <li data-sort='2'>От дорогих к дешевым</li>";
+        break;
     }
-    $render_pagination = ob_get_clean();          
-    // 2222222222222222222222222222222222222222222222222222222222222222222222222222222
+     
+// 222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
 
-    // 3333333333
-    // ob_start();
-
-    // $arg_pagination = array(
-    //     'total' => $query->max_num_pages,
-    // );
-
-    // echo paginate_links($arg_pagination);
-    // $render_pagination_2 = ob_get_clean(); 
-
+    // 333333333333333333333333333333333333333333333333333333333333333333333333333333333333
     ob_start();
 
     $total_pages_value = $query->max_num_pages;
@@ -286,18 +316,20 @@ function my_filter_products() {
     include 'templates/pagination.php' ;
 
     $render_pagination_2 = ob_get_clean(); 
-    // 333333333333
+    // 33333333333333333333333333333333333333333333333333333333333333333333333333333333333333
 
     $result = $query->found_posts;
    
-
+    global $_GET;
     
     wp_send_json([
-    'posts' => $render_posts,
-    'pagination' =>  $render_pagination,
-    'resultNum' => $result,
-    'arg' => $arg,
-    'paginationNew' =>  $render_pagination_2,
+        'posts' => $render_posts,
+        'resultNum' => $result,
+        'paginationNew' =>  $render_pagination_2,
+        'sortContent' => $sort_container,
+        'get' => $_GET,
+        'sail' =>  $is_sail,
+        'arg' => $arg,
     ]);
 
     wp_die(); // обязательно, чтобы завершить AJAX-запрос

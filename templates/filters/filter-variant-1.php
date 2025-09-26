@@ -1,3 +1,9 @@
+<?php
+    if ( empty( $name_taxonomy ) ) {
+        $name_taxonomy = 'имя характеристики';
+    }
+?>
+
 <div class="sidebar__filter sidebar-filter">
     <div class="sidebar-filter__header">
         <h4 class="sidebar__title title-filter-category">

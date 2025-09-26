@@ -1,5 +1,5 @@
- <?php 
-    //   Template name: шаблон Каталога
+<?php 
+    //   Template name: шаблон Saill
     get_header(); 
     function render_filter_block($template, $taxonomy){
       $template_path = locate_template('templates/filters/'.$template.'.php');
@@ -30,14 +30,10 @@
 
     );
 
-    // $filters_staps = array(
-    //   array('template' => 'filter-variant-2', 'taxanomy' => 'pa_strap_color'),
-    //   array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_length'),
-    //   array('template' => 'filter-variant-1', 'taxanomy' => 'pa_strap_width'),
-    // );
+
  ?>
 
- <main class="catalog watch">
+ <main class="catalog sail">
       <div class="container">
         <div class="breadcrumbs">
           <?php my_breadcrumbs();?>
@@ -58,7 +54,15 @@
                       'field' => 'slug',
                       'terms' => 'watch',
                     )
-                  )
+                    ),
+                    'meta_query' => array(
+                        array(
+                            'key'     => '_sale_price',
+                            'value'   => 0,
+                            'compare' => '>',
+                            'type'    => 'NUMERIC',
+                        ),
+                    ),
               );
 
               $query = new WP_Query($arg);

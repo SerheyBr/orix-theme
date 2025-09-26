@@ -195,29 +195,29 @@ if (sortTriggerMob) {
 
 // замена текста в сортировке
 
-if (sortTriggerDesc) {
-  const menuSortItems = sortTriggerDesc.querySelectorAll("ul li");
-  const textSortTrigerDesc = sortTriggerDesc.querySelector("b");
-  menuSortItems.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const textSelectSort = e.currentTarget.innerHTML;
-      textSortTrigerDesc.innerHTML = textSelectSort;
-      console.log(textSelectSort);
-    });
-  });
-}
+// if (sortTriggerDesc) {
+//   const menuSortItems = sortTriggerDesc.querySelectorAll("ul li");
+//   const textSortTrigerDesc = sortTriggerDesc.querySelector("b");
+//   menuSortItems.forEach((el) => {
+//     el.addEventListener("click", (e) => {
+//       const textSelectSort = e.currentTarget.innerHTML;
+//       textSortTrigerDesc.innerHTML = textSelectSort;
+//       console.log(textSelectSort);
+//     });
+//   });
+// }
 
-if (sortTriggerMob) {
-  const menuSortItems = sortTriggerMob.querySelectorAll("ul li");
-  const textSortTrigerMob = sortTriggerMob.querySelector("b");
-  menuSortItems.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const textSelectSort = e.currentTarget.innerHTML;
-      textSortTrigerMob.innerHTML = textSelectSort;
-      console.log(menuSortItems);
-    });
-  });
-}
+// if (sortTriggerMob) {
+//   const menuSortItems = sortTriggerMob.querySelectorAll("ul li");
+//   const textSortTrigerMob = sortTriggerMob.querySelector("b");
+//   menuSortItems.forEach((el) => {
+//     el.addEventListener("click", (e) => {
+//       const textSelectSort = e.currentTarget.innerHTML;
+//       textSortTrigerMob.innerHTML = textSelectSort;
+//       console.log(menuSortItems);
+//     });
+//   });
+// }
 
 const priceSlider = document.querySelector(".sidebar-filter__price-range");
 const minPriceInput = document.querySelector(

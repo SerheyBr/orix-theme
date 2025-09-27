@@ -1,141 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/libs/slim-select/slimselect.css" />
-    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Template-vite.1.0.</title>
-  </head>
-  <body>
-    <!-- header start -->
-    <header class="header">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="burger-menu header__burger">
-            <button class="burger-menu__button"></button>
-          </div>
-          <a href="index.html"
-            ><img
-              class="header__logo"
-              src="assets/images/placeholder.svg"
-              alt="logo"
-              width="80"
-              height="60"
-          /></a>
+<?php
+    get_header() ;
 
-          <nav class="header__navigation">
-            <ul>
-              <li>
-                <a href="catalog.html">Каталог</a>
-                <svg
-                  width="8"
-                  height="5"
-                  viewBox="0 0 8 5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.3"
-                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
-                    fill="white"
-                  />
-                </svg>
+    $product = wc_get_product(get_the_ID());
+    $id_product = $product->id;
+    $taxonomies = get_object_taxonomies( 'product', 'objects' );
 
-                <ul>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Sail</a>
-                <svg
-                  width="8"
-                  height="5"
-                  viewBox="0 0 8 5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.3"
-                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
-                    fill="white"
-                  />
-                </svg>
-                <ul>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Ремешки</a>
-                <svg
-                  width="8"
-                  height="5"
-                  viewBox="0 0 8 5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.3"
-                    d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3L3.5 4L4.5 4L4.5 3L3.5 3Z"
-                    fill="white"
-                  />
-                </svg>
-                <ul>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                  <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Расчет стоимости</a>
-              </li>
-              <li>
-                <a href="#">Информация</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__icons">
-            <div class="header__icon">
-              <img src="assets/images/icons/seacrh.svg" alt="search" />
-            </div>
-            <!-- <a href="#" class="header__icon">
-          <img src="assets/images/icons/star.svg" alt="star" />
-        </a> -->
-            <a href="#" class="header__icon">
-              <img src="assets/images/icons/profile.svg" alt="profile" />
-            </a>
-            <a href="#" class="header__icon">
-              <img src="assets/images/icons/cart.svg" alt="cart" />
-              <p class="header__cart-price">11 899 ₽</p>
-              <p class="header__numbers">7</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- header end -->
+    $brand_terms = get_the_terms( $id_product, 'product_brand' );
+    $brand = $brand_terms[0]->name ?? '';
+    $brand_slug  = $brand_terms[0]->slug ?? '';
+    $category_terms = get_the_terms( $id_product, 'product_cat' );
+    $category_slug = $category_terms[0]->slug ?? '';
+
+
+    $name = $product->name;
+    $full_description = $product->description;
+    $short_description = $product->short_description;
+    $sale_price = $product->sale_price;
+    $regular_price = $product->regular_price;
+    $weight = $product->weight;
+    $length = $product->length;
+    $width = $product->width;
+    $height = $product->height;
+
+    $attributes = $product->attributes;
+    $gallery = $product->gallery_image_ids;
+
+    $main_img_id = $product->image_id;
+    $url_main_img = wp_get_attachment_url( $main_img_id);
+
+    //создаем и собираем массив из url изображений галерее товара !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $array_img_url = array($url_main_img);
+    foreach ( $gallery as $image_id ) {
+        $url = wp_get_attachment_url( $image_id );
+        $array_img_url[] = $url;
+    }
+
+    // собираем массив из габаритов товара !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $details = array(
+        array('name' => 'вес', 'value' => $weight),
+        array('name' => 'длина', 'value' => $length),
+        array('name' => 'ширина', 'value' => $width),
+        array('name' => 'высота', 'value' => $height),
+    );
+
+    // создаем и собираем массив из атрибутов товара (цвет, материал и т.д) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $array_atributes = array(
+        [
+            'name' => 'Бренд', 
+            'value' => $brand,
+        ]
+    );
+
+    foreach($attributes as $atr){
+        $terms = get_the_terms( $id_product, $atr['name'] );
+        $tax = get_taxonomy($atr['name']);
+
+        if ( ! $tax || empty($terms) || is_wp_error($terms) ) {
+        continue; // пропускаем, если таксономии или терминов нет
+    }
+
+        $name_atribut = $tax->labels->singular_name;
+        $value = $terms[0]->name;
+
+        $array_atributes[] = array(
+           'name' => $name_atribut, 
+           'value' => $value,
+        );
+    }
+
+ // функция которая обрабатывает массивы и выводит разметку !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    function render_list_details($array) {
+        foreach($array as $item){
+            echo '<li>';    
+            echo '<p class="full-card__description-name">'.$item['name'].'</p>';        
+            echo '<span>';        
+            echo '<div class="full-card__description-line"></div>';            
+            echo '</span>';        
+            echo '<p class="full-card__description-result">'.$item['value'].'</p>';        
+            echo '</li>';   
+        }
+     
+    }
+?>
 
     <main class="page-full-card">
       <div class="page-full-card__wrapper">
         <div class="container">
           <div class="breadcrumbs">
             <p class="breadcrumbs__content">
-              Главная / Каталог товаров / Обувь
+              Главная / Каталог товаров / Обувь 
             </p>
           </div>
         </div>
@@ -145,145 +98,48 @@
             <div class="full-card">
               <div class="full-card__wrapper">
                 <h3 class="full-card__title hidden">
-                  Кроссовки Nike Court Zoom Cage 2
+                  <?php print_r($name);?>
                 </h3>
                 <div class="full-card__slider">
                   <!-- Основной слайдер -->
                   <div class="swiper full-card-main-slider">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA-110XBC-1A.webp"
-                          alt="shoe1"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA_110XRG_7A.webp"
-                          alt="shoe2"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_DW_5700PT_5.webp"
-                          alt="shoe3"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_DW_6900RGB_1.webp"
-                          alt="shoe4"
-                        />
-                      </div>
+                        <?php
+                            foreach($array_img_url as $url){
+                            echo '<div class="swiper-slide">';
+                            echo '<img src="'.$url.'" alt=""/>';
+                            echo '</div>';
+                            }
+                        ?>
                     </div>
                   </div>
 
                   <!-- Слайдер превью -->
                   <div class="swiper full-card-thumbs-slider">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA-110XBC-1A.webp"
-                          alt="thumb1"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA-110XBC-1A.webp"
-                          alt="thumb2"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA-110XBC-1A.webp"
-                          alt="thumb3"
-                        />
-                      </div>
-                      <div class="swiper-slide">
-                        <img
-                          src="/assets/images/preview_BA-110XBC-1A.webp"
-                          alt="thumb4"
-                        />
-                      </div>
+                        <?php
+                            foreach($array_img_url as $url){
+                            echo '<div class="swiper-slide">';
+                            echo '<img src="'.$url.'" alt=""/>';
+                            echo '</div>';
+                            }
+                        ?>
                     </div>
                     <div class="full-card-thumbs-slider__pagination"></div>
                   </div>
                 </div>
                 <div class="full-card__description">
                   <h3 class="full-card__title">
-                    Кроссовки Nike Court Zoom Cage 2
+                    <?php print_r($name);?>
                   </h3>
                   <p class="full-card__subtitle">Детали:</p>
                   <div class="full-card__description__body">
                     <ul class="full-card__description-items">
-                      <li>
-                        <p class="full-card__description-name">Артикул</p>
-                        <span
-                          ><div class="full-card__description-line"></div
-                        ></span>
-                        <p class="full-card__description-result">234234</p>
-                      </li>
-                      <li>
-                        <p class="full-card__description-name">1</p>
-                        <span
-                          ><div class="full-card__description-line"></div
-                        ></span>
-                        <p class="full-card__description-result">1</p>
-                      </li>
-                      <li>
-                        <p class="full-card__description-name">1</p>
-                        <span
-                          ><div class="full-card__description-line"></div
-                        ></span>
-                        <p class="full-card__description-result">
-                          Lorem, ipsum dolor.
-                        </p>
-                      </li>
-                      <li>
-                        <p class="full-card__description-name">Lorem ipsum</p>
-                        <span
-                          ><div class="full-card__description-line"></div
-                        ></span>
-                        <p class="full-card__description-result">
-                          Lorem, ipsum dolor.
-                        </p>
-                      </li>
+                        <?php render_list_details($array_atributes);?>
+                        <?php render_list_details($details);?>
                     </ul>
-                    <!-- <ul class="full-card__description-list-names">
-          <li>
-            <p>Артикул</p>
-          </li>
-          <li>
-            <p>Категория</p>
-          </li>
-          <li>
-            <p>Категория</p>
-          </li>
-          <li>
-            <p>Модель</p>
-          </li>
-          <li>
-            <p>Цвет</p>
-          </li>
-        </ul>
-        <ul class="full-card__description-list-result">
-          <li>
-            <p>Артикул</p>
-          </li>
-          <li>
-            <p>Категория</p>
-          </li>
-          <li>
-            <p>Категория</p>
-          </li>
-          <li>
-            <p>Модель</p>
-          </li>
-          <li>
-            <p>Цвет</p>
-          </li>
-        </ul> -->
                   </div>
+                  <?php woocommerce_template_single_add_to_cart(); ?>
                   <button class="full-card__btn button">
                     Длбавить в карзину<svg
                       width="6"
@@ -962,310 +818,56 @@
             <div class="page-full-card__slider-bottom">
               <div class="swiper slider-demo-category">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
 
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
+                <?php
+                    if($category_slug == 'watch'){
 
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
+                       $args = array(
+                            'post_type'      => 'product',
+                            'posts_per_page' => 20,
+                            'tax_query'      => array(
+                                'relation' => 'AND', // важно, чтобы учитывались оба условия
+                                array(
+                                    'taxonomy' => 'product_cat',
+                                    'field'    => 'slug',
+                                    'terms'    => $category_slug,
+                                ),
+                                array(
+                                    'taxonomy' => 'product_brand',
+                                    'field'    => 'slug',
+                                    'terms'    => $brand_slug, // сюда передаём слаг бренда
+                                ),
+                            ),
+                        );
 
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
+                    }else{
+                        $args = array(
+                            'post_type' => 'product',
+                            'posts_per_page' => 20,
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'product_cat',
+                                    'field'    => 'slug',
+                                    'terms'    =>  $category_slug,
+                                ),
+                            ),
+                        );
+                    }
+                   
 
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
+                    $query = new WP_Query( $args );
 
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card-product">
-                      <div class="card-product__img">
-                        <img
-                          src="/assets/images/preview_GA_110JAH22_2A.webp"
-                          alt="img"
-                        />
-                      </div>
-
-                      <h3 class="title-card card-product__title">
-                        Nike Court Zoom Cage 2
-                      </h3>
-                      <div class="card-product__price">
-                        <p class="card-product__price--old off">200 BUN</p>
-                        <p class="card-product__price--new">100 BUN</p>
-                      </div>
-                      <a href="page-full-card.html"></a>
-                    </div>
-                  </div>
+                    if($query->have_posts() ){
+                        while($query->have_posts() ){
+                            $query->the_post();
+                            echo '<div class="swiper-slide">';
+                           
+                            get_template_part('templates/card-variant-1');
+                            echo '</div>';
+                        }
+                    }
+                    wp_reset_postdata();
+                    ?>
                 </div>
 
                 <div class="slider-demo-category__navigation">
@@ -1311,109 +913,5 @@
         </div>
       </div>
     </main>
-    <!-- footer start -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer__columns">
-            <div class="footer__column footer__dropdown">
-              <p class="footer__column-title">
-                Каталог
-                <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
-                    fill="white"
-                  />
-                </svg>
-              </p>
-              <ul class="footer__list">
-                <li>
-                  <a href="#">бренд</a>
-                </li>
-                <li>
-                  <a href="#">бренд</a>
-                </li>
-                <li>
-                  <a href="#">бренд</a>
-                </li>
-                <li>
-                  <a href="#">бренд</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__column footer__dropdown">
-              <p class="footer__column-title">
-                Помощь
-                <svg
-                  width="12"
-                  height="8"
-                  viewBox="0 0 12 8"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.46967 7.03033C5.76256 7.32322 6.23744 7.32322 6.53033 7.03033L11.3033 2.25736C11.5962 1.96447 11.5962 1.48959 11.3033 1.1967C11.0104 0.903806 10.5355 0.903806 10.2426 1.1967L6 5.43934L1.75736 1.1967C1.46447 0.903806 0.989593 0.903806 0.696699 1.1967C0.403806 1.48959 0.403806 1.96447 0.696699 2.25736L5.46967 7.03033ZM5.25 5.5L5.25 6.5L6.75 6.5L6.75 5.5L5.25 5.5Z"
-                    fill="white"
-                  />
-                </svg>
-              </p>
-              <ul class="footer__list">
-                <li>
-                  <a href="#">Доставка</a>
-                </li>
-                <li>
-                  <a href="#">Оплата</a>
-                </li>
-                <li>
-                  <a href="#">гарантия</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__column">
-              <p class="footer__column-title">Контакты</p>
-              <ul class="footer__list">
-                <li class="footer__mail">
-                  <a href="#">info@xwear.info</a>
-                </li>
-                <li class="footer__phone">
-                  <a href="tel:79936083885">+7 993 608 38 85</a>
-                </li>
-              </ul>
-              <div class="footer__icons">
-                <p class="footer__icons-title">Мессенджеры</p>
-                <div class="footer__icons-flex">
-                  <a href="#"
-                    ><img src="assets/images/icons/watsap.svg" alt="watsap"
-                  /></a>
-                  <a href="#"
-                    ><img src="assets/images/icons/telegram.svg" alt="telegram"
-                  /></a>
-                </div>
-              </div>
-              <div class="footer__icons">
-                <p class="footer__icons-title">Наши соц.сети</p>
-                <div class="footer__icons-flex">
-                  <a href="#"
-                    ><img src="assets/images/icons/vk.svg" alt="vk"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- footer end -->
 
-    <script src="assets/libs/nouislider/nouislider.min.js"></script>
-    <script src="assets/libs/slim-select/slimselect.min.js"></script>
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+<?php get_footer() ;?>

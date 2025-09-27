@@ -26,5 +26,5 @@
             <p class="card-product__price--old"><?php echo  $regular_prise;?> BUN</p>
         <?php endif;?>
     </div>
-    <a href="page-full-card.html"></a>
+    <a href="<?php the_permalink(); ?>"></a>
 </div>
